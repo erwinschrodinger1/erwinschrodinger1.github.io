@@ -1,0 +1,44 @@
+.Projects
+    display: flex
+    flex-direction: column
+    align-items: center
+    .heading
+        width: max-content
+        font-size: 42px
+        &::before,
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            border-top: 2px red solid
+            transform: rotate(4deg)
+    .projectlist
+        font-size: 64px
+        & div
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            & div
+                margin: 30px 0px
+                transition: all .5s ease-in-out
+                & img
+                    position: absolute
+                    width: 200px
+                    height: 200px
+                    margin-top: 10%
+                    opacity: 0
+                    transition: all .5s ease-in-out
+                &:hover
+                    opacity: 1
+                    cursor: pointer
+                    & img
+                        opacity: 1
+                        margin-top: 5%
+                        transition: all .4s ease-in-out
+
+    .active
+        & div
+            & div
+                opacity: .2
+                transition: all .5s ease-in-out

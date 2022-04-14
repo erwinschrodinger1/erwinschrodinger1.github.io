@@ -1,0 +1,35 @@
+.FamiliarWith
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    margin: 10% 0%
+    .heading
+        width: max-content
+        font-size: 42px
+        &::before,
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            border-top: 2px red solid
+            transform: rotate(3deg)
+    .cards
+        margin: 5% 20%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        gap: 30px
+        flex-wrap: wrap
+        & div
+            width: 144px
+            & img
+                background: white
+                border-radius: 42px
+                height: 84px
+                width: 84px
+            & h1
+                font-size: 24px
+                word-wrap: break-word
+                font-weight: normal
