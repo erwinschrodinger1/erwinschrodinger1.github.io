@@ -10,12 +10,26 @@
         text-align: left
         & h1
             font-size: 154px
+            @media screen and (max-width: 768px)
+                font-size: 120px
+            @media screen and (max-width: 480px)
+                font-size: 64px
+            @media screen and (max-width: 320px)
+                font-size: 42px
+
         & a
             font-size: 44px
             text-decoration: underline
+            @media screen and (max-width: 768px)
+                font-size: 32px
+            @media screen and (max-width: 480px)
+                font-size: 24px
+
     .Hand
         z-index: -1
         align-self: center
         position: absolute
         bottom: 0%
         width: 40%
+        & img
+            width: 100%

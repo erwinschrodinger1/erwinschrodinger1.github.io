@@ -10,12 +10,11 @@ import SkillGraph from "../Elements/SkillGraph";
 import ContactMe from "../Elements/ContactMe";
 export default function HomePage() {
   return (
-    <div>
+    <div className="HomePage">
       <BackgroundGradient
         firstColor="100vh"
         gradient="150vh"
         secondGradient="200vh"
-        secondColor="420vh"
       />
       <div style={{ zIndex: 10, position: "relative" }}>
         <CodeSection
@@ -28,18 +27,21 @@ export default function HomePage() {
           line4="}"
           line4Size={28}
         />
-        <div style={{ margin: "40vh" }} />
-        <CodeSection
-          line1="Impossible.itselfis(){"
-          line1Size={28}
-          line2="printf{`I'am Possible`}"
-          line2Size={64}
-          line3="}"
-          line3Size={28}
-          line4="//@author Nirjal Bhurtel"
-          line4Size={28}
-        />
-        <div style={{ height: "100vh" }}>
+        {/* <div style={{ margin: "40vh" }} /> */}
+        <div>
+          <CodeSection
+            line1="Impossible.itselfis(){"
+            line1Size={28}
+            line2="printf{`I'am Possible`}"
+            line2Size={64}
+            line3="}"
+            line3Size={28}
+            line4="//@author Nirjal Bhurtel"
+            line4Size={28}
+          />
+        </div>
+        {/* <div style={{ height: "100vh" }}> */}
+        <div>
           <SuperMan />
         </div>
         <div>
