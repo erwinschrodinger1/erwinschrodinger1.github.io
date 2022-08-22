@@ -14,34 +14,57 @@ export default function Projects() {
     }, 10);
     return () => clearInterval(interval);
   });
-
+  const projects = [
+    {
+      name: "OMNECAL",
+      image: logo,
+    },
+    {
+      name: "AIFIVERSE",
+      image: logo,
+    },
+    {
+      name: "DIGI-PAPYRUS",
+      image: logo,
+    },
+    {
+      name: "CUBOHOLIC",
+      image: logo,
+    },
+    {
+      name: "EL.MARS",
+      image: logo,
+    },
+  ];
   return (
     <div className="Projects">
       <h1 className="heading">PROJECTS</h1>
       <div className={pjl}>
-        <div>
-          <div
-            style={{
-              transform: `rotate(${velocity}deg) skew(${velocity}deg)`,
-            }}
-            onMouseEnter={() => {
-              pjl === "projectlist"
-                ? setpjl("projectlist active")
-                : setpjl("projectlist");
-            }}
-            onMouseLeave={() => {
-              setpjl("projectlist");
-            }}
-          >
-            <h1>CUBOHOLIC</h1>
+        {projects.map((project) => (
+          <div>
+            <div
+              style={{
+                transform: `rotate(${velocity}deg) skew(${velocity}deg)`,
+              }}
+              onMouseEnter={() => {
+                pjl === "projectlist"
+                  ? setpjl("projectlist active")
+                  : setpjl("projectlist");
+              }}
+              onMouseLeave={() => {
+                setpjl("projectlist");
+              }}
+            >
+              <h1>{project.name}</h1>
 
-            <img src={logo} />
+              <img src={project.image} />
+            </div>
           </div>
-        </div>
-        <div>
+        ))}
+        {/* <div>
           <div
-            style={{
-              transform: `rotate(${velocity}deg) skew(${velocity}deg)`,
+          style={{
+            transform: `rotate(${velocity}deg) skew(${velocity}deg)`,
             }}
             onMouseEnter={() => {
               pjl === "projectlist"
@@ -91,7 +114,7 @@ export default function Projects() {
             <h1>EL. MARS</h1>
             <img src={logo} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

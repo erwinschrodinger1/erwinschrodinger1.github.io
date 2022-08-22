@@ -19,11 +19,11 @@ export default function SuperMan() {
             >
               <img
                 style={{
-                  height: "80%",
                   zIndex: 1,
                 }}
                 src={Superman}
                 alt="Superman"
+                className="SuperManImg"
               />
             </div>
           )}

@@ -1,66 +1,91 @@
 .NavigationBar
-    position: absolute
-    width: calc(100% - 10vw)
+    background: black
+    position: relative
+    width: 100%
     z-index: 25
     height: 8vh
     padding-top: 2vh
-    padding-left: 10vw
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-between
     color: white
     .logo
-        color: white
-        font-size: 10px
-    .contents
+        position: absolute
+        left: 5vw
+        right: auto
+        & img
+            width: 50px
+            @media screen and (max-width: 540px)
+                width: 30px
+    .socialConnect
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        justify-self: flex-start
         display: flex
         flex-direction: row
         justify-content: space-between
-        align-items: flex-end
-        width: 70%
-        .socialConnect
-            justify-self: flex-start
+        width: min-content
+        & div
             display: flex
-            flex-direction: row
-            justify-content: space-between
-            width: 40%
-            & div
-                display: flex
-                position: relative
-                align-items: center
-                justify-content: center
+            position: relative
+            align-items: center
+            justify-content: center
+            height: 42px
+            width: 42px
+            & svg
+                width: 100%
+            @media screen and (max-width: 540px)
+                width: 24px
+                height: 24px
+                & svg
+                    width: 60%
+
+            //change to link
+            &::after
+                content: ""
+                z-index: -5
+                position: absolute
+                background: #bf96e7
+                opacity: 0.6
+                border-radius: 21px
                 height: 42px
                 width: 42px
-                //change to link
-                &::after
-                    content: ""
-                    z-index: -5
-                    position: absolute
-                    background: #bf96e7
-                    opacity: 0.6
-                    border-radius: 21px
-                    height: 42px
-                    width: 42px
-                    transform: scale(0)
-                    transition: all .5s ease-in-out
-                &:hover::after
-                    transform: scale(1)
-                    transition: all .5s ease-in-out
+                transform: scale(0)
+                transition: all .5s ease-in-out
+            &:hover::after
+                transform: scale(1)
+                transition: all .5s ease-in-out
 
-        .about
-            width: 31%
-            display: flex
-            flex-direction: row
-            align-items: flex-end
+    .about
+        position: absolute
+        width: fit-content
+        right: 5vw
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        align-self: center
+        transition: all .5s ease-in-out
+        & p
+            padding-right: 10px
             transition: all .5s ease-in-out
+            font-size: 1rem
+        & svg
+            position: relative
+            left: 0
+            transition: all .5s ease-in-out
+            width: 20px
+            height: auto
+        @media screen and (max-width: 540px)
             & p
-                justify-self: flex-start
-                padding-right: 10px
+                font-size: .8rem
+            & svg
+                width: 14px
+
+        &:hover
+            color: #bf96e7
+            transition: all .5s ease-in-out
+            & svg
+                left: 10px
                 transition: all .5s ease-in-out
-            &:hover
-                color: #bf96e7
-                transition: all .5s ease-in-out
-                & p
-                    padding-right: 20px
-                    transition: all .5s ease-in-out
