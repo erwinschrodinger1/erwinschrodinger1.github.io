@@ -1,5 +1,5 @@
 # Base URL used when generating links to your pages
-baseURL = "https://erwinschrodinger1.github.io/"
+baseURL = "https://nirjalbhurtel.com.np/"
 
 # The theme
 theme = "hugo-bearblog"
