@@ -1,0 +1,58 @@
+# Base URL used when generating links to your pages
+baseURL = "https://erwinschrodinger1.github.io/"
+
+# The theme
+theme = "hugo-bearblog"
+
+# Basic metadata
+title = "Nirjal Bhurtel"
+author = "Nirjal Bhurtel"
+copyright = "Copyright © 2026, Nirjal Bhurtel."
+locale = "en-US"
+
+# Generate a robots.txt for SEO
+enableRobotsTXT = true
+
+# Keep the site simple: no taxonomy pages needed
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+  description = "Portfolio of Nirjal Bhurtel — embedded software architect, researcher and open-source enthusiast from Nepal."
+  title = "Nirjal Bhurtel"
+  dateFormat = "02 Jan, 2006"
+  # hideMadeWithLine = true
+
+# Navigation
+[[menus.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menus.main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menus.main]]
+name = "Projects"
+url = "/projects/"
+weight = 3
+
+[[menus.main]]
+name = "Writing"
+url = "/writing/"
+weight = 4
+
+[[menus.main]]
+name = "Contact"
+url = "/contact/"
+weight = 5
+
+# Syntax highlighting (BearBlog style)
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true

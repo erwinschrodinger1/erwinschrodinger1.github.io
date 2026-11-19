@@ -1,0 +1,6 @@
+/public/
+/resources/
+.hugo_build.lock
+
+# Personal CV contains sensitive details — do not publish
+Nirjal_CV_Europass.pdf
